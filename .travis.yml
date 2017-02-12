@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+- '0.10'
+before_script:
+- npm install -g harp
+- npm install
+- chmod +x ./scripts/deploy.sh
+script: gulp process-all
+after_success: npm run-script deploy
+env:
+  global:
+    secure: Uncrj4wIIXRPX8sjdxDhZXjwNJ2vBkjNb3fqHrBStz5dTpoMLuZqhjsM5pIgAHmIoEr4cfS8ej82DOGKcqlazVn8ZpeAV6oevuOoyH2fGV81yhEDTNjpNd8MA9CdI2VAQvfhmT5R/ig+bp1hu4mNEo5b6LJW8wr3GbErv73apyPZFFVUwaBINWXSVGsaK/pOU912iBwAXgQ2g55SCqHCK9A2Tmd7UdtZKRWDw8dTs4H2CNRLohHgvdjrOi5GyvlM3aAr/4imdkW9m61oE7nAiDEvPoa5Esm5DEBNdzilx32w0EejDIzpDW5/hX2knR9rPU7LlXFnUFdVkHgxS1gIWci6iw15/wJC+DnCWii4LTJXXr4+Md9wGP6X8+1fMuaw46Ksvkjv1BMlwAFEjm/xXG2OB63DVdqVJtPuEl6fNV2uTAsHJH+s6ttPvWXTGEprslJ/ucS76XZgMe2D28OfupqshFo22kbUCS9O2SCc/hQaD+zzFPldDWAGjUcrbFhCwKk2C9GJ4891PKQ9c2U8ZD9tEwk6VVqkMC017RISP5WIadKitFPXVJsUbnlXwGR5tgw390XX+0kKTLuOgYS8JuHdm2q3psZ81bGtPZtfh1qH3UFXhAIpLIH8DGMUnTv/OwLgcbIKTzEVZI98/K051YRkHMO0n8GvvO7GGT7/zI8=
